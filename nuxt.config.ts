@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         serviceDomain: process.env.NUXT_PUBLIC_MICROCMS_SERVICE_DOMAIN,
         apiKey: process.env.NUXT_PUBLIC_MICROCMS_API_KEY,
       },
+      appOrigin: process.env.NUXT_PUBLIC_APP_ORIGIN,
     },
   },
 

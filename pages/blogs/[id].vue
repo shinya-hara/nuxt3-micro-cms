@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Blog } from "~/models/blog";
 
+const config = useRuntimeConfig();
 const route = useRoute();
 const blogId =
   typeof route.params.id === "string" ? route.params.id : route.params.id[0];
@@ -16,7 +17,7 @@ useSeoMeta({
   ogTitle: blog.value?.title,
   ogDescription: "desc",
   ogImage: blog.value?.eyecatch?.url,
-  ogUrl: `http://localhost:3000${route.fullPath}`,
+  ogUrl: `${config.public.appOrigin}${route.fullPath}`,
   twitterTitle: blog.value?.title,
   twitterDescription: "desc",
   twitterImage: blog.value?.eyecatch?.url,
